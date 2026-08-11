@@ -8,7 +8,7 @@ from sklearn.metrics import mean_absolute_error, r2_score
 
 def train_laliga_player_revaluation_model():
     print("=" * 65)
-    print(" 🧠 ENTRENANDO MODELO DE IA CON DATOS REALES DE LALIGA 23/24 ")
+    print("  ENTRENANDO MODELO DE IA CON DATOS REALES DE LALIGA 23/24 ")
     print("=" * 65)
     
     # 1. Leer los FEI reales calculados desde el Data Lake
@@ -64,12 +64,12 @@ def train_laliga_player_revaluation_model():
     mae = mean_absolute_error(y_test, preds)
     r2 = r2_score(y_test, preds)
     
-    print(f" 📊 Snapshot Leído: {latest_file if files else 'N/A'}")
-    print(f" 📊 Tamaño del Dataset Real: {len(df)} futbolistas")
-    print(f" 🎯 Precisión del Modelo (R² Score Actualizado): {r2:.4f}")
-    print(f" 📉 Error Medio Absoluto (MAE): ±{mae:.2f}%")
+    print(f"  Snapshot Leído: {latest_file if files else 'N/A'}")
+    print(f"  Tamaño del Dataset Real: {len(df)} futbolistas")
+    print(f"  Precisión del Modelo (R² Score Actualizado): {r2:.4f}")
+    print(f"  Error Medio Absoluto (MAE): ±{mae:.2f}%")
     print("-" * 65)
-    print(" 🔍 IMPORTANCIA DE LAS VARIABLES ACTUALIZADA:")
+    print("  IMPORTANCIA DE LAS VARIABLES:")
     
     importances = pd.DataFrame({
         "Variable": X.columns,
