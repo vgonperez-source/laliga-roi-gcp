@@ -4,7 +4,7 @@ import numpy as np
 
 def run_interactive_simulation():
     print("=" * 70)
-    print(" 🤖 SIMULADOR INTERACTIVO DE FICHAJES E INTELIGENCIA ARTIFICIAL ")
+    print("  SIMULADOR INTERACTIVO DE FICHAJES E INTELIGENCIA ARTIFICIAL ")
     print("=" * 70)
     
     np.random.seed(42)
@@ -56,20 +56,20 @@ def run_interactive_simulation():
     value_gain_m = future_value_m - transfer_fee_eur_m
     
     if transfer_fee_eur_m > 50 or age > 29:
-        risk_level = "🔴 RIESGO ALTO (Elevado Compromiso de Capital)"
+        risk_level = " RIESGO ALTO (Elevado Compromiso de Capital)"
     elif transfer_fee_eur_m > 25 or age > 27:
-        risk_level = "🟡 RIESGO MEDIO (Inversión Moderada)"
+        risk_level = " RIESGO MEDIO (Inversión Moderada)"
     else:
-        risk_level = "🟢 RIESGO BAJO (Alto Potencial Patrimonio)"
+        risk_level = " RIESGO BAJO (Alto Potencial Patrimonio)"
 
-    print(f" 👤 Jugador Evaluado: {player_name}")
-    print(f" 🎂 Edad: {age} años | ⏱️ Minutos: {minutes_played} | ⚽ Goles: {goals} | 🅰️ Asistencias: {assists}")
-    print(f" 💶 Precio Fichaje: €{transfer_fee_eur_m:.1f}M")
-    print(f" 🏟️ Equipo Destino: {target_team} (Índice Eficiencia FEI: {selected_fei}%)")
+    print(f"  Jugador Evaluado: {player_name}")
+    print(f"  Edad: {age} años |  Minutos: {minutes_played} |  Goles: {goals} |  Asistencias: {assists}")
+    print(f"  Precio Fichaje: €{transfer_fee_eur_m:.1f}M")
+    print(f"  Equipo Destino: {target_team} (Índice Eficiencia FEI: {selected_fei}%)")
     print("-" * 70)
-    print(f" 📈 Predicción Revalorización a 1 Año: {predicted_reval_pct:+.1f}%")
-    print(f" 💰 Valor Estimado Futuro: €{future_value_m:.1f}M (Ganancia Est: €{value_gain_m:+.1f}M)")
-    print(f" 🛡️ Perfil de Riesgo Financiero: {risk_level}")
+    print(f"  Predicción Revalorización a 1 Año: {predicted_reval_pct:+.1f}%")
+    print(f"  Valor Estimado Futuro: €{future_value_m:.1f}M (Ganancia Est: €{value_gain_m:+.1f}M)")
+    print(f"  Perfil de Riesgo Financiero: {risk_level}")
     print("=" * 70)
 
 if __name__ == "__main__":
