@@ -9,11 +9,11 @@ def run_bigquery_sql_pipeline():
     files = glob.glob(data_lake_dir)
     
     if not files:
-        print("❌ No se encontraron archivos JSON en el Data Lake.")
+        print(" No se encontraron archivos JSON en el Data Lake.")
         return
         
     latest_file = max(files, key=os.path.getctime)
-    print(f"📖 Leyendo snapshot del Data Lake: {latest_file}")
+    print(f" Leyendo snapshot del Data Lake: {latest_file}")
     
     with open(latest_file, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -29,11 +29,11 @@ def run_bigquery_sql_pipeline():
         
     clean_sql = raw_sql.replace("`laliga_raw.raw_standings`", "raw_standings")
     
-    print("⚡ Ejecutando transformaciones analíticas en SQL...")
+    print(" Ejecutando transformaciones analíticas en SQL...")
     df_results = pd.read_sql(clean_sql, conn)
     
     print("\n" + "=" * 80)
-    print(" 🏆 RANKING DE EFICIENCIA FINANCIERA EN LALIGA (DATA WAREHOUSE 23/24) ")
+    print("  RANKING DE EFICIENCIA FINANCIERA EN LALIGA (DATA WAREHOUSE 23/24) ")
     print("=" * 80)
     
     df_show = df_results[["team_name", "sporting_rank", "budget_rank", "rank_delta", "points", "cost_per_point_eur", "financial_efficiency_index", "efficiency_quadrant"]].copy()
