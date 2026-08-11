@@ -21,10 +21,10 @@ def upload_to_data_lake_emulator():
         json.dump(payload, f, indent=2, ensure_ascii=False)
         
     print("=" * 65)
-    print(" 🚀 INGESTA A DATA LAKE COMPLETADA CON ÉXITO ")
+    print("  INGESTA A DATA LAKE COMPLETADA CON ÉXITO ")
     print("=" * 65)
-    print(f" 📍 Ruta Local Data Lake: {full_path}")
-    print(f" 📊 Tamaño del Snapshot: {os.path.getsize(full_path)} bytes")
+    print(f"  Ruta Local Data Lake: {full_path}")
+    print(f"  Tamaño del Snapshot: {os.path.getsize(full_path)} bytes")
     print("=" * 65)
 
 if __name__ == "__main__":
