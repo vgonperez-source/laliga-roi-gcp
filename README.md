@@ -1,7 +1,7 @@
 # Análisis de Eficiencia Financiera y ROI en LaLiga
 
 ## ¿En qué consiste el proyecto?
-Este proyecto analiza la relación entre el rendimiento deportivo de los equipos de LaLiga EA Sports (Temporada 2023/2024) y su inversión económica en plantilla. Su objetivo es medir la eficiencia presupuestaria mediante el **Financial Efficiency Index (FEI)** y ofrecer un **Simulador de Revalorización de Fichajes** que evalúa el ROI futuro y el riesgo financiero de nuevos jugadores mediante Inteligencia Artificial.
+Este proyecto analiza la relación entre el rendimiento deportivo de los equipos de LaLiga EA Sports (Temporada 2023/2024) y su inversión económica en plantilla. Su objetivo es medir la eficiencia presupuestaria mediante el Financial Efficiency Index (FEI) y ofrecer un Simulador de Revalorización de Fichajes que evalúa el ROI futuro y el riesgo financiero de nuevos jugadores mediante Inteligencia Artificial.
 
 ## ¿Cómo se ha realizado?
 El proyecto sigue un flujo de datos modular estructurado en tres fases:
