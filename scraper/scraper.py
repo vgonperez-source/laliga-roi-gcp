@@ -38,4 +38,4 @@ def extract_laliga_pipeline():
 
 if __name__ == "__main__":
     data = extract_laliga_pipeline()
-    print("✅ Extracción realizada.")
+    print(" Extracción realizada.")
