@@ -1,30 +1,23 @@
 # Análisis de Eficiencia Financiera y ROI en LaLiga
 
-## ¿En qué consiste el proyecto?
+## Contexto del Proyecto
 Este proyecto analiza la relación entre el rendimiento deportivo de los equipos de LaLiga EA Sports (Temporada 2023/2024) y su inversión económica en plantilla. Su objetivo es medir la eficiencia presupuestaria mediante el Financial Efficiency Index (FEI) y ofrecer un Simulador de Revalorización de Fichajes que evalúa el ROI futuro y el riesgo financiero de nuevos jugadores mediante Inteligencia Artificial.
 
-## ¿Cómo se ha realizado?
-El proyecto sigue un flujo de datos modular estructurado en tres fases:
+## Arquitectura y Metodología
+El análisis se ha dividido en tres fases principales de manera secuencial:
 
-1. **Extracción e Ingesta (Python)**: Recolección automatizada de datos deportivos y financieros oficiales de LaLiga 23/24 almacenados en formato JSON.
-2. **Data Warehouse (BigQuery SQL)**: Transformación analítica mediante SQL para calcular el coste por punto (€/Punto) y clasificar el rendimiento de cada club (ej. Girona FC como líder de eficiencia con FEI 103.2%).
-3. **Motor de IA y Simulador (Machine Learning)**: Modelo de regresión (*Gradient Boosting*) y simulador predictivo que estima la revalorización a 12 meses y el nivel de riesgo financiero de un fichaje evaluando el rendimiento individual del jugador y la eficiencia del equipo.
+- Extracción e Ingesta: Recolección automatizada de datos deportivos y financieros oficiales de LaLiga 23/24 almacenados en formato JSON usando Python.
+- Data Warehouse: Transformación analítica mediante SQL en BigQuery para calcular el coste por punto (€/Punto) y clasificar el rendimiento de cada club (ej. Girona FC como líder de eficiencia con FEI 103.2%).
+- Machine Learning predictivo: Desarrollo de un modelo de regresión (Gradient Boosting) y simulador predictivo que estima la revalorización a 12 meses y el nivel de riesgo financiero de un fichaje evaluando el rendimiento individual del jugador y la eficiencia del equipo.
 
-## Evaluación del Modelo de IA
-* **Precisión (Coeficiente de Determinación R²)**: 0.8296
-* **Error Medio Absoluto (MAE)**: ±5.30%
-* **Variables Más Influyentes (Feature Importance)**:
-  1. Minutos jugados (`minutes_played`): 34.0%
-  2. Edad del jugador (`age`): 31.5%
-  3. Goles marcados (`goals`): 22.0%
-  4. Eficiencia del equipo (`team_fei`): 6.3%
+## Resultados Clave
+Los resultados obtenidos aportan valor para la toma de decisiones financieras y de fichajes en los clubes:
 
-## Tecnologías Utilizadas
-* **Lenguajes**: Python 3.11, SQL
-* **Librerías**: Pandas, Scikit-Learn, Requests, BeautifulSoup4
-* **Conceptos de Nube / Infraestructura**: Data Lake Storage, BigQuery DW, Machine Learning
+- Precisión predictiva: El modelo alcanzó un Coeficiente de Determinación (R²) de 0.8296 y un Error Medio Absoluto (MAE) de ±5.30%.
+- Variables influyentes: Las métricas con mayor peso en el algoritmo son los minutos jugados (34.0%), la edad del jugador (31.5%), los goles marcados (22.0%) y la eficiencia del equipo (6.3%).
 
-## Estructura del Repositorio
-* `scraper/`: Extracción e ingesta de datos.
-* `bigquery/`: Consultas SQL y vistas analíticas del Data Warehouse.
-* `ml/`: Entrenamiento del modelo de IA y script del Simulador de Revalorización (`predict_custom_player.py`).
+## Reproducibilidad
+Para ejecutar este código en tu propio equipo, solo necesitas seguir estos pasos:
+1. Clonar este repositorio.
+2. Instalar las dependencias ejecutando el comando pip install -r requirements.txt.
+3. Ejecutar los scripts que están dentro de la carpeta notebooks, empezando por la extracción de datos y finalizando con el modelo de IA.
