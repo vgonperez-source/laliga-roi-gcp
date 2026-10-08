@@ -1,0 +1,15 @@
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+
+# Datos pesados (ignorar todo en /data excepto event_log)
+data/*
+!data/event_log_city_group.csv
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
